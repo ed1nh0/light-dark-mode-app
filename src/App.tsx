@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import React, { useState } from 'react';
 import { ThemeContext } from './contexts/theme-context';
 import Layout from './layout';
 import moon from './images/moon.png';
@@ -6,7 +6,7 @@ import sun from './images/sun.png';
 
 import './App.scss';
 
-const App: FC = () => {
+const App: React.FC = () => {
   // Detecting the default theme
   const isBrowserDefaulDark = () => window.matchMedia('(prefers-color-scheme: dark)').matches;
 

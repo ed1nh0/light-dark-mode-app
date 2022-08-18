@@ -1,10 +1,10 @@
-import { FC, useContext } from 'react';
+import React, { useContext } from 'react';
 import { ThemeContext } from '../contexts/theme-context';
 
 import logoIcon from '../images/logo-icon.png';
 import './styles.scss';
 
-const Header: FC = () => {
+const Header: React.FC = () => {
   const { theme, setTheme } = useContext(ThemeContext);
 
   const handleThemeChange = () => {
@@ -21,7 +21,7 @@ const Header: FC = () => {
           <span>Light/Dark mode app</span>
         </a>
         <div className="toggle-btn-section">
-          <div className={`toggle-checkbox m-vertical-auto`}>
+          <div className="toggle-checkbox m-vertical-auto">
             <input
               className="toggle-btn__input"
               type="checkbox"
@@ -29,7 +29,11 @@ const Header: FC = () => {
               onChange={handleThemeChange}
               checked={theme === 'light'}
             />
-            <button type="button" className={`toggle-btn__input-label`} onClick={handleThemeChange}></button>
+            <button
+              type="button"
+              className="toggle-btn__input-label"
+              onClick={handleThemeChange}
+            />
           </div>
         </div>
       </div>
